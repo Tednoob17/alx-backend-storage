@@ -11,4 +11,5 @@ count = 0
 
 
 def get_page(url: str) -> str:
+    """ get a page and cach value"""
 
