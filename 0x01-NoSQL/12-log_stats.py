@@ -25,4 +25,3 @@ if __name__ == "__main__":
     print("\tmethod PATCH: {}".format(patch))
     print("\tmethod DELETE: {}".format(delete))
     print("{} status check".format(get_status))
- 
