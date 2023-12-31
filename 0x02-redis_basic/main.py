@@ -41,6 +41,6 @@ cache = Cache()
 # s3 = cache.store("third")
 # print(s3)
 
-# print("inputs: {}".format(inputs))
-# print("outputs: {}".format(outputs))
+# inputs = cache._redis.lrange("{}:inputs".format(cache.store.__qualname__), 0, -1)
+# outputs = cache._redis.lrange("{}:outputs".format(cache.store.__qualname__), 0, -1)
 
