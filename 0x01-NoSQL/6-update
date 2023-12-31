@@ -1,3 +1,4 @@
 // Adds a new attribute to a doc
 db.school.update(
- 
+    { name: "Holberton school" },
+
