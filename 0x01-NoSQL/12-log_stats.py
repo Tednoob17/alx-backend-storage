@@ -17,3 +17,11 @@ if __name__ == "__main__":
     get_status = nginx_logs.count_documents({'method': 'GET',
                                              'path': '/status'})
 
+    print("{} logs".format(docs))
+    print("Methods:")
+    print("\tmethod GET: {}".format(get))
+    print("\tmethod POST: {}".format(post))
+    print("\tmethod PUT: {}".format(put))
+    print("\tmethod PATCH: {}".format(patch))
+    print("\tmethod DELETE: {}".format(delete))
+    print("{} status check".format(get_status))
