@@ -62,10 +62,14 @@ class Cache:
         self._redis.set(key, data)
         return key
 
+    def get(self, key: str,
+            fn: Callable = None) -> Union[str, bytes, int, float]:
+        """Get data from Redis"""
+        data = self._redis.get(key)
+        if fn:
+            return fn(data)
+        return data
 
-    def get_str(self, key: str) -> str:
-        """Convert bytes to str"""
-        return self.get(key, str)
 
     def get_int(self, key: str) -> int:
         """Convert bytes to int"""
